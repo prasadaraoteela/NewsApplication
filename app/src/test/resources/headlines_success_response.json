@@ -1,0 +1,32 @@
+{
+  "status": "ok",
+  "totalResults": 2,
+  "articles": [
+    {
+      "source": {
+        "id": null,
+        "name": "Lifehacker.com"
+      },
+      "author": "Brendan Hesse",
+      "title": "How to Watch Movies With Your Friends on 'Movies Anywhere'",
+      "description": "Movies Anywhere recently rolled out a new “Watch Together” feature that lets multiple people meet for a synchronized movie night over the internet. The new feature works on your desktop or via Movies Anywhere’s iOS, Android and smart TV apps, and all movies o…",
+      "url": "https://lifehacker.com/how-to-watch-movies-with-your-friends-on-movies-anywher-1844548979",
+      "urlToImage": "https://i.kinja-img.com/gawker-media/image/upload/c_fill,f_auto,fl_progressive,g_center,h_675,pg_1,q_80,w_1200/bjuyepthg3arx6gcrvfm.png",
+      "publishedAt": "2020-07-29T21:00:00Z",
+      "content": "Movies Anywhere recently rolled out a new Watch Together feature that lets multiple people meet for a synchronized movie night over the internet. The new feature works on your desktop or via Movies A… [+3184 chars]"
+    },
+    {
+      "source": {
+        "id": "engadget",
+        "name": "Engadget"
+      },
+      "author": "Mariella Moon",
+      "title": "YouTube will offer 100 kids movies and specials for free",
+      "description": "YouTube is throwing parents who can’t take watching Frozen over and over anymore a lifeline. Over the next month until August 31st, YouTube Kids will release over 100 movies and specials as part of the platform’s “After School” experience project. In an annou…",
+      "url": "https://www.engadget.com/youtube-kids-after-school-075138434.html",
+      "urlToImage": "https://o.aolcdn.com/images/dims?resize=1200%2C630&crop=1200%2C630%2C0%2C0&quality=95&image_uri=https%3A%2F%2Fs.yimg.com%2Fos%2Fcreatr-uploaded-images%2F2020-07%2F2f03cd90-d09e-11ea-b5af-de18711a16dd&client=amp-blogside-v2&signature=c0e53f9b06b67a153cd631fb7d0bf311b966020a",
+      "publishedAt": "2020-07-28T07:51:38Z",
+      "content": "“[W]e want to help you with a library of high quality full-length movies and specials that will enrich as well as entertain your children, and that you can enjoy along with them.”\r\nThe new selection … [+613 chars]"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">NewsApplication</string>
+    <string name="headlines">HEADLINES</string>
+
+    <string name="content_description_headline_image">Headline image</string>
+    <string name="content_description_back_button">Back</string>
+</resources>

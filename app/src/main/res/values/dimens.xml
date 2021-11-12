@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Font sizes -->
+    <dimen name="font_size_toolbar_title">29sp</dimen>
+    <dimen name="font_size_headline_title">20sp</dimen>
+    <dimen name="font_size_headline_details_title">29sp</dimen>
+    <dimen name="font_size_headline_details_source">20sp</dimen>
+    <dimen name="font_size_headline_source">12sp</dimen>
+    <dimen name="font_size_headline_description">14sp</dimen>
+    <dimen name="font_size_headline_date">12sp</dimen>
+
+
+    <!-- Padding -->
+    <dimen name="padding_small">12dp</dimen>
+    <dimen name="padding_medium">16dp</dimen>
+    <dimen name="padding_large">24dp</dimen>
+    <dimen name="padding_extra_large">32dp</dimen>
+
+    <!-- Margins -->
+    <dimen name="margin_extra_small">8dp</dimen>
+    <dimen name="margin_small">12dp</dimen>
+    <dimen name="margin_medium">16dp</dimen>
+    <dimen name="margin_large">24dp</dimen>
+    <dimen name="margin_extra_large">32dp</dimen>
+    <dimen name="margin_42_dp">42dp</dimen>
+    <dimen name="margin_64_dp">64dp</dimen>
+
+    <!-- Card properties -->
+    <dimen name="card_corner_radius_small">6dp</dimen>
+    <dimen name="card_corner_radius_medium">12dp</dimen>
+    <dimen name="card_corner_radius_large">16dp</dimen>
+    <dimen name="card_corner_radius_extra_large">24dp</dimen>
+
+    <dimen name="card_elevation_small">4dp</dimen>
+    <dimen name="card_elevation_medium">8dp</dimen>
+</resources>
