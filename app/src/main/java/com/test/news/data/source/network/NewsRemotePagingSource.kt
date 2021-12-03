@@ -37,14 +37,3 @@ class NewsRemotePagingSource @Inject constructor(
         }
     }
 }
-
-private fun NetworkArticle.convertToDomainEntity(page: Int): Headline {
-    return Headline(
-        title = title,
-        description = description,
-        imageUrl = imageUrl,
-        date = datePublished.substring(0, datePublished.indexOf('T')),
-        source = source.name,
-        page = page
-    )
-}

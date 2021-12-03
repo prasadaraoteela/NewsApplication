@@ -29,7 +29,7 @@ class NewsRemoteDataSource @Inject constructor(
     }
 }
 
-private fun NetworkArticle.convertToDomainEntity(page: Int): Headline {
+fun NetworkArticle.convertToDomainEntity(page: Int): Headline {
     return Headline(
         title = title,
         description = description,

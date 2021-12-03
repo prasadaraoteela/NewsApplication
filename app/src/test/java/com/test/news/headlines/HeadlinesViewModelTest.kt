@@ -2,6 +2,7 @@ package com.test.news.headlines
 
 import com.test.news.data.Result
 import com.test.news.data.repository.NewsRepository
+import com.test.news.data.source.network.convertToDomainEntity
 import com.test.news.data.source.network.dto.NetworkNews
 import com.test.news.getOrAwaitValue
 import com.test.news.model.Headline
@@ -37,11 +38,12 @@ class HeadlinesViewModelTest {
     @Test
     fun observeHeadlines_success() = runBlockingTest {
         // Given
-        val headlines = TestResourceReader.readHeadlines("headlines_success_response.json")
+        val newsResult: NetworkNews? =
+            TestResourceReader.readNetworkNewsResponse("headlines_success_response.json")
+
+        val headlines = newsResult?.articles?.map { it.convertToDomainEntity(1) } ?: emptyList()
         `when`(mockRepository.fetchHeadlines(anyInt(), anyInt())).thenReturn(
-            Result.Success(
-                headlines
-            )
+            Result.Success(headlines)
         )
         // When
         val result: Result.Success<List<Headline>> =
@@ -57,7 +59,8 @@ class HeadlinesViewModelTest {
     @Test
     fun observeHeadlines_failure() = runBlockingTest {
         // Given
-        val newsResult: NetworkNews? = TestResourceReader.readNetworkNewsResponse("headlines_apikey_failure_response.json")
+        val newsResult: NetworkNews? =
+            TestResourceReader.readNetworkNewsResponse("headlines_apikey_failure_response.json")
         println(newsResult)
         `when`(mockRepository.fetchHeadlines(anyInt(), anyInt()))
             .thenReturn(Result.Failure(newsResult?.message ?: ""))
