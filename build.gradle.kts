@@ -1,19 +1,18 @@
 buildscript {
     repositories {
         google()
-        jcenter()
+        mavenCentral()
     }
     dependencies {
         classpath(Classpath.gradle)
         classpath(Classpath.kotlin)
-        classpath(Classpath.hilt)
     }
 }
 
 allprojects {
     repositories {
         google()
-        jcenter()
+        mavenCentral()
     }
 }
 

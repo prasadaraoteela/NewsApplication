@@ -3,8 +3,6 @@ plugins {
     kotlin(Plugin.android)
     kotlin(Plugin.androidExtensions)
     kotlin(Plugin.kapt)
-    id(Plugin.hilt)
-    id("kotlin-android")
 }
 
 android {
@@ -106,11 +104,11 @@ dependencies {
     implementation(Library.Retrofit.jsonConverter)
     implementation(Library.Retrofit.logging)
 
-    // Hilt library dependencies
-    implementation(Library.Hilt.core)
-    kapt(Library.Hilt.annotations)
-    implementation(Library.Hilt.viewModel)
-    kapt(Library.Hilt.viewModelAnnotations)
+    // Dagger dependency injection library
+    implementation(Library.Dagger.CORE)
+    kapt(Library.Dagger.COMPILER)
+    implementation(Library.Dagger.ANDROID_CORE)
+    kapt(Library.Dagger.ANDROID_ANNOTATIONS)
 
     // Glide library dependencies
     implementation(Library.Glide.glide)

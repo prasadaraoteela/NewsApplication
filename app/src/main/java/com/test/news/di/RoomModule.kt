@@ -4,28 +4,26 @@ import android.content.Context
 import androidx.room.Room
 import com.test.news.data.source.local.room.NewsDatabase
 import com.test.news.data.source.local.room.dao.HeadlinesDao
+import com.test.news.di.scope.ApplicationScoped
 import dagger.Module
 import dagger.Provides
-import dagger.hilt.InstallIn
-import dagger.hilt.android.components.ApplicationComponent
-import dagger.hilt.android.qualifiers.ApplicationContext
-import javax.inject.Singleton
 
 /**
  * Created by Prasad Rao on 12-08-2020 12:46
  **/
 @Module
-@InstallIn(ApplicationComponent::class)
-object RoomModule {
+class RoomModule(
+    private val applicationContext: Context
+) {
 
     @Provides
     fun provideHeadlinesDao(database: NewsDatabase): HeadlinesDao {
         return database.headlinesDao()
     }
 
-    @Singleton
+    @ApplicationScoped
     @Provides
-    fun provideNewsDatabase(@ApplicationContext applicationContext: Context): NewsDatabase {
+    fun provideNewsDatabase(): NewsDatabase {
         return Room.databaseBuilder(
             applicationContext,
             NewsDatabase::class.java,

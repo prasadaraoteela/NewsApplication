@@ -7,16 +7,15 @@ import com.test.news.data.source.local.NewsLocalDataSource
 import com.test.news.data.source.network.NewsRemoteDataSource
 import com.test.news.di.qualifier.LocalNewsDataSource
 import com.test.news.di.qualifier.RemoteNewsDataSource
+import com.test.news.di.scope.ActivityScoped
+import com.test.news.headlines.HeadlinesViewModelFactory
 import dagger.Binds
 import dagger.Module
-import dagger.hilt.InstallIn
-import dagger.hilt.android.components.ActivityComponent
 
 /**
  * Created by Prasad Rao on 10-08-2020 20:21
  **/
 @Module
-@InstallIn(ActivityComponent::class)
 abstract class DataModule {
 
     @Binds

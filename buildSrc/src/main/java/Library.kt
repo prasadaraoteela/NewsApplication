@@ -59,6 +59,15 @@ object Library {
         const val CORE = "androidx.paging:paging-runtime:$PAGING_VERSION"
     }
 
+    object Dagger {
+        private const val DAGGER_VERSION = "2.40.5"
+
+        const val CORE = "com.google.dagger:dagger:$DAGGER_VERSION"
+        const val COMPILER = "com.google.dagger:dagger-compiler:$DAGGER_VERSION"
+        const val ANDROID_CORE = "com.google.dagger:dagger-android:$DAGGER_VERSION"
+        const val ANDROID_ANNOTATIONS = "com.google.dagger:dagger-android-processor:$DAGGER_VERSION"
+    }
+
     object Hilt {
         // Version
         private const val hiltVersion = "2.28-alpha"
