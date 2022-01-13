@@ -108,6 +108,7 @@ dependencies {
     implementation(Library.Dagger.CORE)
     kapt(Library.Dagger.COMPILER)
     implementation(Library.Dagger.ANDROID_CORE)
+    implementation(Library.Dagger.ANDROID_SUPPORT)
     kapt(Library.Dagger.ANDROID_ANNOTATIONS)
 
     // Glide library dependencies

@@ -65,6 +65,7 @@ object Library {
         const val CORE = "com.google.dagger:dagger:$DAGGER_VERSION"
         const val COMPILER = "com.google.dagger:dagger-compiler:$DAGGER_VERSION"
         const val ANDROID_CORE = "com.google.dagger:dagger-android:$DAGGER_VERSION"
+        const val ANDROID_SUPPORT = "com.google.dagger:dagger-android-support:$DAGGER_VERSION"
         const val ANDROID_ANNOTATIONS = "com.google.dagger:dagger-android-processor:$DAGGER_VERSION"
     }
 

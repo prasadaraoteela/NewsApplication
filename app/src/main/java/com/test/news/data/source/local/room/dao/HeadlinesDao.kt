@@ -12,9 +12,9 @@ import com.test.news.data.source.local.room.entity.DatabaseHeadline
 @Dao
 interface HeadlinesDao {
 
-    @Query("SELECT * FROM headline WHERE page = :page LIMIT :pageSize")
-    suspend fun fetchHeadlines(page: Int, pageSize: Int): List<DatabaseHeadline>
+  @Query("SELECT * FROM headline WHERE page = :page LIMIT :pageSize")
+  suspend fun fetchHeadlines(page: Int, pageSize: Int): List<DatabaseHeadline>
 
-    @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insertHeadlines(headlines: List<DatabaseHeadline>)
+  @Insert(onConflict = OnConflictStrategy.REPLACE)
+  suspend fun insertHeadlines(headlines: List<DatabaseHeadline>)
 }

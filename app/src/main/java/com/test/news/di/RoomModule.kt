@@ -13,21 +13,21 @@ import dagger.Provides
  **/
 @Module
 class RoomModule(
-    private val applicationContext: Context
+  private val applicationContext: Context
 ) {
 
-    @Provides
-    fun provideHeadlinesDao(database: NewsDatabase): HeadlinesDao {
-        return database.headlinesDao()
-    }
+  @Provides
+  fun provideHeadlinesDao(database: NewsDatabase): HeadlinesDao {
+    return database.headlinesDao()
+  }
 
-    @ApplicationScoped
-    @Provides
-    fun provideNewsDatabase(): NewsDatabase {
-        return Room.databaseBuilder(
-            applicationContext,
-            NewsDatabase::class.java,
-            "news_database"
-        ).build()
-    }
+  @ApplicationScoped
+  @Provides
+  fun provideNewsDatabase(): NewsDatabase {
+    return Room.databaseBuilder(
+      applicationContext,
+      NewsDatabase::class.java,
+      "news_database"
+    ).build()
+  }
 }

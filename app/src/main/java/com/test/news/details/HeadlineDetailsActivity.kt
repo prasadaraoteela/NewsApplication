@@ -8,24 +8,24 @@ import com.test.news.model.toHeadline
 import kotlinx.android.synthetic.main.activity_headline_details.*
 
 class HeadlineDetailsActivity : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_headline_details)
+  override fun onCreate(savedInstanceState: Bundle?) {
+    super.onCreate(savedInstanceState)
+    setContentView(R.layout.activity_headline_details)
 
-        intent.extras?.let { extras ->
-            val headline = extras.toHeadline()
-            println("debug: $headline")
+    intent.extras?.let { extras ->
+      val headline = extras.toHeadline()
+      println("debug: $headline")
 
-            Glide.with(this).load(headline.imageUrl).into(imageHeadline)
+      Glide.with(this).load(headline.imageUrl).into(imageHeadline)
 
-            labelHeadlineTitle.text = headline.title
-            labelHeadlineSource.text = headline.source
-            labelHeadlineDate.text = headline.date
-            labelHeadlineDescription.text = headline.description
-        }
-
-        imageBack.setOnClickListener {
-            finish()
-        }
+      labelHeadlineTitle.text = headline.title
+      labelHeadlineSource.text = headline.source
+      labelHeadlineDate.text = headline.date
+      labelHeadlineDescription.text = headline.description
     }
+
+    imageBack.setOnClickListener {
+      finish()
+    }
+  }
 }

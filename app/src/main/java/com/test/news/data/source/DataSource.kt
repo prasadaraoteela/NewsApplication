@@ -8,7 +8,7 @@ import com.test.news.model.Headline
  **/
 interface DataSource {
 
-    suspend fun fetchHeadlines(page: Int, pageSize: Int): Result<List<Headline>>
+  suspend fun fetchHeadlines(page: Int, pageSize: Int): Result<List<Headline>>
 
-    suspend fun saveHeadlines(headlines: List<Headline>)
+  suspend fun saveHeadlines(headlines: List<Headline>)
 }

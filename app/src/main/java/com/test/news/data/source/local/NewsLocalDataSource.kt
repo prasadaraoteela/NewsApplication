@@ -11,40 +11,40 @@ import javax.inject.Inject
  * Created by Prasad Rao on 10-08-2020 19:34
  **/
 class NewsLocalDataSource @Inject constructor(
-    private val headlinesDao: HeadlinesDao
+  private val headlinesDao: HeadlinesDao
 ) : DataSource {
-    override suspend fun fetchHeadlines(page: Int, pageSize: Int): Result<List<Headline>> {
-        val headlines = headlinesDao.fetchHeadlines(page, pageSize).map { databaseHeadline ->
-            databaseHeadline.convertToDomainHeadline()
-        }
-        return Result.Success(headlines)
+  override suspend fun fetchHeadlines(page: Int, pageSize: Int): Result<List<Headline>> {
+    val headlines = headlinesDao.fetchHeadlines(page, pageSize).map { databaseHeadline ->
+      databaseHeadline.convertToDomainHeadline()
     }
+    return Result.Success(headlines)
+  }
 
-    override suspend fun saveHeadlines(headlines: List<Headline>) {
-        headlinesDao.insertHeadlines(headlines.map { headline ->
-            headline.convertToDatabaseHeadline()
-        })
-    }
+  override suspend fun saveHeadlines(headlines: List<Headline>) {
+    headlinesDao.insertHeadlines(headlines.map { headline ->
+      headline.convertToDatabaseHeadline()
+    })
+  }
 }
 
 private fun Headline.convertToDatabaseHeadline(): DatabaseHeadline {
-    return DatabaseHeadline(
-        title = title,
-        description = description,
-        imageUrl = imageUrl,
-        datePublished = date,
-        source = source,
-        page = page
-    )
+  return DatabaseHeadline(
+    title = title,
+    description = description,
+    imageUrl = imageUrl,
+    datePublished = date,
+    source = source,
+    page = page
+  )
 }
 
 private fun DatabaseHeadline.convertToDomainHeadline(): Headline {
-    return Headline(
-        title = title,
-        description = description,
-        imageUrl = imageUrl,
-        date = datePublished,
-        source = source,
-        page = page
-    )
+  return Headline(
+    title = title,
+    description = description,
+    imageUrl = imageUrl,
+    date = datePublished,
+    source = source,
+    page = page
+  )
 }

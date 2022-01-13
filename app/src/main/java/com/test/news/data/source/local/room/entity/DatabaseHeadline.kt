@@ -9,30 +9,30 @@ import androidx.room.Entity
 @Entity(tableName = "headline", primaryKeys = ["title", "description"])
 data class DatabaseHeadline(
 
-    @ColumnInfo(name = "page")
-    val page: Int = 1,
+  @ColumnInfo(name = "page")
+  val page: Int = 1,
 
-    @ColumnInfo(name = "author")
-    val author: String = "",
+  @ColumnInfo(name = "author")
+  val author: String = "",
 
-    @ColumnInfo(name = "title")
-    val title: String,
+  @ColumnInfo(name = "title")
+  val title: String,
 
-    @ColumnInfo(name = "description")
-    val description: String,
+  @ColumnInfo(name = "description")
+  val description: String,
 
-    @ColumnInfo(name = "news_source_link")
-    val url: String = "",
+  @ColumnInfo(name = "news_source_link")
+  val url: String = "",
 
-    @ColumnInfo(name = "news_image_url")
-    val imageUrl: String,
+  @ColumnInfo(name = "news_image_url")
+  val imageUrl: String,
 
-    @ColumnInfo(name = "date_published")
-    val datePublished: String,
+  @ColumnInfo(name = "date_published")
+  val datePublished: String,
 
-    @ColumnInfo(name = "content")
-    val content: String? = null,
+  @ColumnInfo(name = "content")
+  val content: String? = null,
 
-    @ColumnInfo(name = "source")
-    val source: String
+  @ColumnInfo(name = "source")
+  val source: String
 )

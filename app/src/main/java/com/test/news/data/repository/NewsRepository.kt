@@ -10,7 +10,7 @@ import kotlinx.coroutines.flow.Flow
  **/
 interface NewsRepository {
 
-    suspend fun fetchHeadlines(page: Int, pageSize: Int): Result<List<Headline>>
+  suspend fun fetchHeadlines(page: Int, pageSize: Int): Result<List<Headline>>
 
-    fun fetchPagingHeadlines(): Flow<PagingData<Headline>>
+  fun fetchPagingHeadlines(): Flow<PagingData<Headline>>
 }

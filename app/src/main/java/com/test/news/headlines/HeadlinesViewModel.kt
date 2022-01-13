@@ -15,15 +15,15 @@ import kotlinx.coroutines.flow.Flow
  * Created by Prasad Rao on 10-08-2020 20:06
  **/
 class HeadlinesViewModel constructor(
-    private val newsRepository: NewsRepository
-): ViewModel() {
+  private val newsRepository: NewsRepository
+) : ViewModel() {
 
-    fun observeHeadlines(page: Int, pageSize: Int): LiveData<Result<List<Headline>>> = liveData {
-        emit(Result.Loading)
-        emit(newsRepository.fetchHeadlines(page, pageSize))
-    }
+  fun observeHeadlines(page: Int, pageSize: Int): LiveData<Result<List<Headline>>> = liveData {
+    emit(Result.Loading)
+    emit(newsRepository.fetchHeadlines(page, pageSize))
+  }
 
-    fun observeHeadlines(): Flow<PagingData<Headline>> {
-        return newsRepository.fetchPagingHeadlines().cachedIn(viewModelScope)
-    }
+  fun observeHeadlines(): Flow<PagingData<Headline>> {
+    return newsRepository.fetchPagingHeadlines().cachedIn(viewModelScope)
+  }
 }

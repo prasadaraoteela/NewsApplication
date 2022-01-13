@@ -15,14 +15,15 @@ import retrofit2.converter.gson.GsonConverterFactory
 @Module
 object RetrofitModule {
 
-    @Provides
-    fun provideNewsApiService(retrofit: Retrofit): NewsService = retrofit.create(NewsService::class.java)
+  @Provides
+  fun provideNewsApiService(retrofit: Retrofit): NewsService =
+    retrofit.create(NewsService::class.java)
 
-    @ApplicationScoped
-    @Provides
-    fun provideRetrofit(): Retrofit = Retrofit.Builder()
-        .baseUrl("https://newsapi.org/v2/")
-        .client(OkHttpClient())
-        .addConverterFactory(GsonConverterFactory.create(Gson()))
-        .build()
+  @ApplicationScoped
+  @Provides
+  fun provideRetrofit(): Retrofit = Retrofit.Builder()
+    .baseUrl("https://newsapi.org/v2/")
+    .client(OkHttpClient())
+    .addConverterFactory(GsonConverterFactory.create(Gson()))
+    .build()
 }
