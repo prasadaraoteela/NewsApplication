@@ -5,7 +5,7 @@ import com.test.news.data.source.network.NewsService
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
-import dagger.hilt.android.components.ApplicationComponent
+import dagger.hilt.components.SingletonComponent
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -14,7 +14,7 @@ import retrofit2.converter.gson.GsonConverterFactory
  * Created by Prasad Rao on 10-08-2020 19:58
  **/
 @Module
-@InstallIn(ApplicationComponent::class)
+@InstallIn(SingletonComponent::class)
 object RetrofitModule {
 
     @Provides

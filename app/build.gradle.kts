@@ -4,12 +4,10 @@ plugins {
     kotlin(Plugin.androidExtensions)
     kotlin(Plugin.kapt)
     id(Plugin.hilt)
-    id("kotlin-android")
 }
 
 android {
     compileSdkVersion(ApplicationConfig.compileSdkVersion)
-    buildToolsVersion(ApplicationConfig.buildToolsVersion)
 
     defaultConfig {
         minSdkVersion(ApplicationConfig.minSdkVersion)
@@ -65,7 +63,6 @@ dependencies {
     implementation(Library.Androidx.appCompat)
     implementation(Library.Androidx.constraintLayout)
     implementation(Library.Androidx.kotlinExtensions)
-    implementation(Library.Androidx.multiDex)
     kapt(Library.Androidx.annotations)
 
     // Google dependencies
@@ -75,6 +72,7 @@ dependencies {
     implementation(Library.JetPack.navigationFragment)
     implementation(Library.JetPack.navigationUi)
     implementation(Library.JetPack.playCore)
+    implementation(Library.JetPack.playCoreKtx)
 
     // Room database library
     implementation(Library.JetPack.room)
@@ -88,17 +86,10 @@ dependencies {
     implementation(Library.JetPack.viewModel)
     implementation(Library.JetPack.liveData)
     kapt(Library.JetPack.annotations)
-    implementation(Library.JetPack.lifecycleExtension)
     implementation(Library.JetPack.lifecycleSavedState)
     implementation(Library.JetPack.lifecycleProcess)
     implementation(Library.JetPack.lifecycleService)
     implementation(Library.JetPack.fragmentViewModel)
-
-    // Paging library
-    implementation(Library.JetPack.paging)
-
-    // Data Binding library
-//    implementation(Library.JetPack.dataBinding)
 
     // Retrofit network library dependencies
     implementation(Library.Retrofit.core)
@@ -109,8 +100,6 @@ dependencies {
     // Hilt library dependencies
     implementation(Library.Hilt.core)
     kapt(Library.Hilt.annotations)
-    implementation(Library.Hilt.viewModel)
-    kapt(Library.Hilt.viewModelAnnotations)
 
     // Glide library dependencies
     implementation(Library.Glide.glide)
@@ -131,5 +120,5 @@ dependencies {
     implementation(Library.Other.timber)
 
     // Paging
-    implementation(Library.Paging.CORE)
+    implementation(Library.Paging.Core)
 }

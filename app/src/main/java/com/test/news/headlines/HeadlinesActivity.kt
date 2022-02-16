@@ -3,13 +3,9 @@ package com.test.news.headlines
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.Observer
 import androidx.lifecycle.lifecycleScope
 import com.test.news.R
-import com.test.news.data.Result
 import com.test.news.ui.hide
-import com.test.news.ui.show
-import com.test.news.ui.showSnackBar
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_headlines.*
 import kotlinx.android.synthetic.main.content_headlines.*

@@ -1,24 +1,23 @@
 package com.test.news.headlines
 
-import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.liveData
 import androidx.lifecycle.viewModelScope
-import androidx.paging.Pager
-import androidx.paging.PagingConfig
 import androidx.paging.PagingData
 import androidx.paging.cachedIn
 import com.test.news.data.Result
 import com.test.news.data.repository.NewsRepository
-import com.test.news.data.source.network.NewsRemotePagingSource
 import com.test.news.model.Headline
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.Flow
+import javax.inject.Inject
 
 /**
  * Created by Prasad Rao on 10-08-2020 20:06
  **/
-class HeadlinesViewModel @ViewModelInject constructor(
+@HiltViewModel
+class HeadlinesViewModel @Inject constructor(
     private val newsRepository: NewsRepository
 ): ViewModel() {
 

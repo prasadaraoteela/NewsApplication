@@ -10,13 +10,13 @@ import com.test.news.di.qualifier.RemoteNewsDataSource
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
-import dagger.hilt.android.components.ActivityComponent
+import dagger.hilt.android.components.ViewModelComponent
 
 /**
  * Created by Prasad Rao on 10-08-2020 20:21
  **/
 @Module
-@InstallIn(ActivityComponent::class)
+@InstallIn(ViewModelComponent::class)
 abstract class DataModule {
 
     @Binds
