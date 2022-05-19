@@ -1,7 +1,6 @@
 plugins {
     id(Plugin.application)
     kotlin(Plugin.android)
-    kotlin(Plugin.androidExtensions)
     kotlin(Plugin.kapt)
     id(Plugin.hilt)
 }
@@ -23,6 +22,10 @@ android {
                 arguments["room.incremental"] = "true"
             }
         }
+    }
+
+    buildFeatures {
+        viewBinding = true
     }
 
     sourceSets.all {
@@ -49,7 +52,9 @@ android {
     }
 
     testOptions {
-        unitTests.isReturnDefaultValues = true
+        unitTests {
+            isIncludeAndroidResources = true
+        }
     }
 }
 

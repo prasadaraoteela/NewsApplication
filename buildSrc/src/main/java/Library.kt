@@ -82,7 +82,7 @@ object Library {
     const val junitAndroid = "androidx.test.ext:junit:1.1.1"
     const val espresso = "androidx.test.espresso:espresso-core:3.2.0"
     const val hamcrest = "org.hamcrest:hamcrest-all:1.3"
-    const val robolectric = "org.robolectric:robolectric:4.3"
+    const val robolectric = "org.robolectric:robolectric:4.6"
     const val mockito = "org.mockito:mockito-core:3.4.6"
     const val coroutines = "org.jetbrains.kotlinx:kotlinx-coroutines-test:1.3.8"
   }

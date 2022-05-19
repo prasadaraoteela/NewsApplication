@@ -3,29 +3,31 @@ package com.test.news.details
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
-import com.test.news.R
+import com.test.news.databinding.ActivityHeadlineDetailsBinding
 import com.test.news.model.toHeadline
-import kotlinx.android.synthetic.main.activity_headline_details.*
+import com.test.news.ui.viewBinding
 
 class HeadlineDetailsActivity : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_headline_details)
 
-        intent.extras?.let { extras ->
-            val headline = extras.toHeadline()
-            println("debug: $headline")
+  private val binding: ActivityHeadlineDetailsBinding by viewBinding(ActivityHeadlineDetailsBinding::inflate)
 
-            Glide.with(this).load(headline.imageUrl).into(imageHeadline)
+  override fun onCreate(savedInstanceState: Bundle?) {
+    super.onCreate(savedInstanceState)
 
-            labelHeadlineTitle.text = headline.title
-            labelHeadlineSource.text = headline.source
-            labelHeadlineDate.text = headline.date
-            labelHeadlineDescription.text = headline.description
-        }
+    intent.extras?.let { extras ->
+      val headline = extras.toHeadline()
+      println("debug: $headline")
 
-        imageBack.setOnClickListener {
-            finish()
-        }
+      Glide.with(this).load(headline.imageUrl).into(binding.imageHeadline)
+
+      binding.labelHeadlineTitle.text = headline.title
+      binding.labelHeadlineSource.text = headline.source
+      binding.labelHeadlineDate.text = headline.date
+      binding.labelHeadlineDescription.text = headline.description
     }
+
+    binding.imageBack.setOnClickListener {
+      finish()
+    }
+  }
 }
